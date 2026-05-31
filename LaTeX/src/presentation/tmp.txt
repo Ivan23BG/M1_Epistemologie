@@ -1,0 +1,404 @@
+\begin{titlepage}
+\begin{center}
+
+% --- LOGOS ---
+% \includegraphics[width=0.4\textwidth]{./images/UM1.png}~\\[1cm]
+\begin{minipage}{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{./images/UM1.png}
+\end{minipage}\hfill
+\begin{minipage}{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{./images/FDS1.png}
+\end{minipage}
+
+\vfill
+
+% --- TITRE ---
+\hrule
+\vspace{.5cm}
+{\huge\bfseries{Qu'advient-il des notions de comp\'etence et de r\'eussite scolaire dans un monde o\`u les IAG sont en plein essor?}} % title of the report
+\vspace{.5cm}
+\hrule
+\vspace{.7cm}
+{\large Mémoire d'épistémologie de l'informatique --- Master 1 Algorithmique}\\
+
+
+\vfill
+% --- ILLUSTRATION TIKZ ---
+\renewcommand{\abstractname}{Sujet}
+\begin{abstract}
+Dans ce mémoire, nous étudierons les notions de compétence et de réussite scolaire, marquées par le développement important des IAG.
+On commencera par donner des définitions partielles des thématiques centrales à cette question, notamment sur les notions de compétence et de réussite scolaire.
+On étudiera ensuite comment les IAg remettent en question les méthodes d'évaluation actuelles tout en présentant les deux positions opposées sur cette problématique: l'interdiction ou l'integration de ces outils dans le système d'education.
+On cherchera à mettre en évidence les tensions que révèlent l'apparition d'outils tels que les IAg dans le système scolaire actuel plutôt que de proposer des systèmes différents.
+\end{abstract}
+\renewcommand{\abstractname}{Résumé}
+\begin{abstract}
+Ce m\'emoire interroge les transformations des notions de comp\'etence et de r\'eussite scolaire \`a l'\`ere des intelligences artificielles g\'en\'eratives (IAG). 
+Il s'agit d'analyser en quoi ces outils modifient les cadres traditionnels d'\'evaluation, tout en mettant en lumi\`ere les tensions \'epist\'emologiques et p\'edagogiques qu'ils introduisent dans le syst\`eme \'educatif.
+Apr\`es avoir pos\'e des d\'efinitions des notions centrales --- comp\'etence, r\'eussite scolaire et IAG --- nous examinons comment ces outils fragilisent les pratiques d'\'evaluation existantes.
+Nous confrontons ensuite les deux grandes positions institutionnelles face \`a ce ph\'enom\`ene: l'interdiction et l'int\'egration.
+Plut\^ot que de trancher entre ces deux positions, nous cherchons \`a mettre en \'evidence les tensions \'epist\'emologiques plus profondes que r\'ev\`ele l'apparition des IAG~: la question de l'authenticit\'e du travail, le d\'eplacement de l'autorit\'e du savoir, et la crise des crit\`eres d'\'evaluation qui fondent le syst\`eme scolaire actuel.
+\end{abstract}
+
+% if u want to replace abstract with "Sujet" use the following command
+% \renewcommand{\abstractname}{Sujet}
+
+\vfill
+
+% --- ACTEURS (AUTEUR & ENCADRANT) ---
+    % Aligner auteur et encadrant côte à côte avec des minipages évite que la page 
+    % ne devienne trop longue verticalement à cause des blocs empilés.
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \textsc{\textbf{Auteur}}\\[0.2cm]
+        Ivan LEJEUNE
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \textsc{\textbf{Encadrant}}\\[0.2cm]
+        Bruno DURAND
+    \end{minipage}
+
+
+\vfill
+% --- DATE ---
+\displaydate{frontpagedate}
+
+% \centering \displaydate{frontpagedate} % Dags dato
+\end{center}
+\end{titlepage}\section{Introduction}
+
+% - Mise en contexte (essor des IAG)
+% - Problématique générale
+% - Intérêt épistémologique
+% - Annonce du plan
+
+Les intelligences artificielles g\'en\'eratives (IAG) ont fait apparition dans l'espace public et \'educatif avec une rapidit\'e sans pr\'ec\'edent. 
+Depuis le lancement grand public de ChatGPT fin 2022, ces outils capables de produire des textes, des raisonnements et des synth\`eses de documents se sont r\'epandus massivement dans les pratiques \'etudiantes. 
+L'histoire de l'IA en \'education est pourtant ancienne: autour des années 1950, des premières expérimentations d'utilisation de l'IA dans le cadre scolaire ont \'et\'e men\'ees, notamment pour vérifier la justesse d'expressions math\'ematiques~\citep{siham2024intelligence}.
+
+Dans les années 1980, l'éducation scolaire est devenue le terrain de recherche principal de l'IA, avec la création de systèmes modélisant les connaissances d'experts dans divers domaines.
+
+Ce que les IA g\'en\'eratives introduisent de radicalement nouveau, c'est la capacit\'e de \emph{g\'en\'erer} du contenu en langage naturel qui ressemble \`a une production humaine: une dissertation, un rapport, un m\'emoire.
+
+Cette \'evolution souligne une question fondamentale pour le syst\`eme \'educatif: si un outil peut produire en quelques secondes un travail formellement irr\'eprochable, que mesurent encore nos \'evaluations?
+Et par cons\'equent, que signifie encore \emph{r\'eussir} \`a l'\'ecole, ou \emph{\^etre comp\'etent}~? Ce n'est pas l\`a une question purement pratique ou organisationnelle. 
+Elle touche \`a des fondements \'epist\'emologiques: la nature du savoir scolaire, les crit\`eres de sa validation, la relation entre l'individu et les outils qu'il mobilise pour produire de la connaissance.
+
+L'int\'er\^et \'epist\'emologique du sujet r\'eside pr\'ecis\'ement dans ce que les IAG font appara\^\i tre par contraste: des pr\'esuppos\'es sur l'apprentissage et l'\'evaluation que le syst\`eme scolaire avait rarement eu besoin d'expliciter.
+L'apparition de l'IAG agit comme un r\'ev\'elateur, mettant en lumi\`ere des tensions que le syst\`eme \'educatif n'avait pas encore eu \`a affronter.
+Ainsi, la probl\'ematique de ce m\'emoire n'est pas de proposer un syst\`eme \'educatif alternatif, mais de d\'ecrire et d'analyser ces tensions.
+
+Notre plan sera le suivant. 
+Nous commencerons par d\'efinir les notions centrales: comp\'etence, r\'eussite scolaire, et intelligences artificielles g\'en\'eratives (section~\ref{sec:definitions}).  % chktex 44
+Nous poserons ensuite le cadre th\'eorique et \'epist\'emologique qui sous-tend notre analyse (\ref{sec:cadre}). 
+Nous examinerons comment les IAG remettent en question les m\'ethodes d'\'evaluation actuelles (\ref{sec:remise}), avant d'exposer les deux grandes positions institutionnelles --- interdiction et int\'egration --- face \`a ce d\'efi (\ref{sec:positions}). 
+Enfin, nous d\'egagerons les tensions \'epist\'emologiques profondes que ce ph\'enom\`ene r\'ev\`ele (\ref{sec:tensions}), avant de conclure par une discussion ouverte (\ref{sec:discussion}).
+
+\section{D\'efinitions des notions fondamentales}\label{sec:definitions}
+
+\subsection{La notion de comp\'etence}
+% - Définitions classiques
+% - Approches pédagogiques
+% - Dimension évaluative
+
+La notion de comp\'etence est l'une des plus discut\'ees en sciences de l'\'education. 
+Elle n'appartient pas originellement au monde scolaire: elle est importée du monde du travail et de la formation professionnelle, o\`u elle d\'esigne la capacit\'e op\'erationnelle \`a accomplir des t\^aches dans des contextes d\'etermin\'es. 
+Son introduction dans le cadre scolaire, amorc\'ee dans les ann\'ees 1990, a suscit\'e de vives controverses, certains y lisant une r\'eduction utilitariste de l'id\'eal \'educatif.
+
+Une d\'efinition de r\'ef\'erence en p\'edagogie francophone est celle de~\cite{perrenoud2011construire}:
+
+\begin{displayquote}[\cite{perrenoud2011construire}]
+Une capacit\'e d'action efficace face \`a une famille de situations, qu'on arrive \`a ma\^\i triser parce qu'on dispose \`a la fois des connaissances n\'ecessaires et de la capacit\'e de les mobiliser \`a bon escient, en temps opportun, pour identifier et r\'esoudre de vrais probl\`emes.
+\end{displayquote}
+
+
+Deux \'el\'ements ressortent de cette d\'efinition. 
+Premi\`erement, la comp\'etence n'est pas la simple possession de savoirs: elle requiert leur \emph{mobilisation} en situation.
+Deuxi\`emement, elle s'exerce face \`a des \og{}familles de situations\fg{}, c'est-\`a-dire qu'elle suppose une capacit\'e de transfert, d'adaptation \`a des contextes in\'edits.
+
+\cite{tardif2006evaluation}compl\`ete cette d\'efinition en insistant sur la mobilisation de \og{}ressources internes et externes\fg{}. % chktex 2
+Cette pr\'ecision est très importante: elle ouvre la voie \`a la reconnaissance que les outils et les bases de donn\'ees font partie d'outils légitimes à disposition. 
+C'est pr\'ecis\'ement cette ouverture qui rend la question des IAG si d\'elicate: si la comp\'etence inclut la mobilisation de ressources externes, alors l'IA g\'en\'erative peut-elle \^etre consid\'er\'ee comme une telle ressource? S'il existe un outil capable de répondre à une famille de situations, est-ce que la comp\'etence consiste à savoir utiliser cet outil, ou à faire sans lui?
+
+Au plan institutionnel, la France a int\'egr\'e l'approche par comp\'etences dans ses curricula via le \emph{Socle commun de connaissances, de comp\'etences et de culture} (2006, r\'evis\'e en 2015), organisant les apprentissages autour de domaines transversaux. 
+Cette architecture curriculaire vise \`a former des \'el\`eves capables de mobiliser leurs savoirs dans des situations de vie r\'eelle --- objectif qui se heurte de plein fouet aux possibilit\'es des IAG de simuler cette mobilisation~\citep{leroux2015evaluer}.
+
+\subsection{La notion de r\'eussite scolaire}
+% - Indicateurs traditionnels (notes, diplômes)
+% - Vision institutionnelle
+% - Limites conceptuelles
+
+Dans son acception la plus courante, la r\'eussite scolaire renvoie \`a l'obtention de notes satisfaisantes, au passage dans la classe sup\'erieure, \`a la certification par un dipl\^ome.
+C'est une r\'eussite au sens \emph{institutionnel}: est r\'eussissant l'\'el\`eve que l'institution reconna\^\i t comme tel, \`a travers ses instruments de mesure et de classement.
+Cette d\'efinition, aussi fonctionnelle qu'elle soit, masque une tension fondamentale: ce qu'elle mesure rel\`eve-t-il de comp\'etences authentiquement acquises, ou d'une conformit\'e aux codes et attendus de l'institution~?
+
+La sociologie critique a depuis longtemps soulign\'e le caract\`ere socialement construit de la r\'eussite scolaire. 
+Pour Bourdieu et Passeron, l'\'ecole ne r\'ecompense pas le m\'erite individuel: elle valorise le \emph{capital culturel} que les familles transmettent in\'egalement selon leur position sociale~\citep{pluet1971pierre}. 
+La r\'eussite scolaire appara\^\i t d\`es lors comme une performance sociale autant que cognitive: les \'el\`eves issus de milieux favoris\'es ma\^\i trisent plus rapidement les codes que l'institution r\'ecompense. 
+L'\'ecole l\'egitime ainsi des in\'egalit\'es sociales de d\'epart en les faisant passer pour des diff\'erences de m\'erite ou d'intelligence.
+
+Ce constat sociologique est crucial pour notre sujet: si la r\'eussite scolaire \'etait d\'ej\`a partiellement d\'econnect\'ee de la comp\'etence r\'eelle, l'arriv\'ee des IAG ne fait qu'aggrandir cette d\'econnexion. 
+De plus, l'article de~\cite{alexandre2019ia} dans \emph{Pouvoirs} pose la question radicale: dans une \og{}\'economie de la connaissance\fg{} o\`u l'intelligence est la cl\'e de tous les pouvoirs, l'\'ecole, \og{}en tant que technologie de transmission de l'intelligence, est d'ores et d\'ej\`a une technologie d\'epass\'ee\fg{}~\citep{alexandre2019ia}.
+Si cette th\`ese est peut \^etre vue comme excessive dans sa radicalit\'e, elle pointe un fait r\'eel: les indicateurs traditionnels de r\'eussite (notes, dipl\^omes) r\'ev\`elent de plus en plus leurs \emph{limites conceptuelles} face \`a un monde o\`u les outils cognitifs externalis\'es transforment profond\'ement ce que signifie \og{}savoir\fg{}.
+
+\subsection{Les intelligences artificielles g\'en\'eratives}
+% - Définition technique rapide
+% - Exemples d'usages en contexte scolaire
+
+Les intelligences artificielles g\'en\'eratives (IAG) d\'esignent des syst\`emes capables de produire, \`a partir d'une instruction en langage naturel, des contenus vari\'es: textes, images, code, synth\`eses, argumentations. 
+Techniquement, elles reposent sur de grands mod\`eles de langage (LLM, \emph{Large Language Models}) entra\^\i n\'es sur des corpus massifs, qui g\'en\`erent des r\'eponses par pr\'ediction statistique de la suite la plus probable d'une s\'equence de tokens (ceci est une simplification mais elle suffit dans ce contexte). 
+ChatGPT (OpenAI), Gemini (Google), Claude (Anthropic) ou Mistral illustrent ce paradigme.
+
+Comme le retracent Jabraoui et Vandapuye (2024), l'usage de l'IA en \'education a une histoire de plus de soixante ans, des premiers syst\`emes experts des ann\'ees 1980 aux syst\`emes adaptatifs des ann\'ees 2000, avant l'arriv\'ee des IA g\'en\'eratives actuelles~\citep{siham2024intelligence}.
+Ce qui diff\'erencie fondamentalement ces derni\`eres de leurs pr\'ed\'ecesseurs est leur \emph{g\'en\'eralit\'e}: elles ne sont pas sp\'ecialis\'ees dans un domaine ou une t\^ache, mais peuvent produire tout type de contenu textuel, y compris des types de productions scolaires qui avaient jusqu'alors servi d'\'etalon de la comp\'etence humaine.
+Elles ne sont plus spécialistes d'une seule discipline (math\'ematiques, langues, etc.) ou d'une seule fonction (tuteur, correcteur, etc.), mais peuvent intervenir dans de multiples domaines et ainsi devenir des outils polyvalents répondant à une grande variété de besoins.
+
+Dans le contexte scolaire, leurs usages sont multiples et difficiles \`a limiter: r\'edaction de dissertations et de rapports, g\'en\'eration de plans, r\'esolution d'exercices, aide \`a la compr\'ehension de textes complexes, simulation de dialogues, pr\'eparation aux examens. 
+Contrairement \`a la calculatrice ou au correcteur orthographique --- outils \`a p\'erim\`etre d'action d\'elimit\'e qui avaient \'et\'e progressivement int\'egr\'es dans les pratiques scolaires --- les IAG op\`erent dans le domaine m\^eme que l'\'evaluation scolaire cherche \`a mesurer. 
+Alors qu'une calculatrice peut aider \`a faire un calcul, on mesure chez l'\'etudiant sa capacit\'e \`a faire le calcul sans calculatrice mais aussi d'autres compétences math\'ematiques plus \'elabor\'ees, comme la mod\'elisation ou l'interpr\'etation de r\'esultats, chose qu'une calculatrice ne peut faire de par son p\'erim\`etre d'action limit\'e.
+Cette superposition entre le domaine d'opération des IAG et le domaine de compétence évaluées dans le système scolaire est au c\oe{}ur de la probl\'ematique qui nous occupe.
+\section{Cadre théorique et épistémologique}\label{sec:cadre}
+
+Pour analyser les tensions introduites par les IAG, il convient de préciser les présupposés épistémologiques sur lesquels repose l'évaluation scolaire.
+Ces présupposés ne sont pas des détails techniques: ils constituent le fondement implicite de ce que le système scolaire entend par \emph{savoir}, \emph{compétence} et \emph{réussite}.
+C'est précisément parce qu'ils sont rarement explicités qu'ils se révèlent fragiles dès lors qu'un outil vient les mettre à l'épreuve.
+
+\subsection{La transposition didactique et ses effets épistémologiques}
+
+La théorie de la \emph{transposition didactique}, développée par Chevallard (1985), part d'un constat simple mais aux conséquences profondes: le savoir qui circule à l'école n'est pas le savoir produit par les savants. 
+Il en est une version transformée, décontextualisée puis recontextualisée, rendue enseignable au prix d'un éloignement de ses conditions réelles de production. 
+Une démonstration mathématique telle qu'elle figure dans un manuel n'est pas la démonstration telle qu'elle a été construite par un chercheur: elle a été épurée de ses tâtonnements, de ses erreurs, de ses dépendances à un contexte particulier.
+
+Ce détachement a une conséquence directe sur l'évaluation: on évalue non pas une capacité à produire du savoir dans un contexte réel, mais une maîtrise d'une version scolaire, normée et stabilisée de ce savoir.
+L'approche par compétences cherche précisément à corriger cet écart, en réintroduisant des situations-problèmes représentatives de la vie réelle. 
+Mais elle se heurte alors à une difficulté nouvelle: plus les tâches évaluées ressemblent à des situations réelles, plus elles sont exposées à l'intervention d'outils réels --- comme les IAG.\@
+La transposition didactique avait jusqu'ici protégé l'évaluation scolaire en la maintenant dans un espace artificiel; en voulant sortir de cet espace, l'approche par compétences expose ses propres présupposés.
+
+\subsection{La reproduction sociale et la construction de la légitimité scolaire}
+
+Le cadre posé par Bourdieu apporte un second niveau d'analyse, distinct mais
+complémentaire. 
+Pour Bourdieu et Passeron (\citeyear{pluet1971pierre}), le système scolaire n'est pas un dispositif neutre de transmission des savoirs: il est un mécanisme de reproduction sociale qui transforme des inégalités d'origine en différences de mérite. 
+L'école consacre comme légitime un certain rapport au savoir --- distancié, formel, décontextualisé --- qui est précisément celui que les familles cultivées transmettent à leurs enfants. 
+Ce faisant, elle masque le caractère arbitraire de cette légitimité derrière l'apparence de l'objectivité des critères.
+
+Ce mécanisme a des implications directes pour notre sujet. 
+Si les critères d'évaluation scolaire valorisent un style d'écrit, une structure argumentative, une maîtrise lexicale que certains héritent et que d'autres doivent laborieusement construire, alors ces critères ne mesurent pas seulement une compétence: ils mesurent aussi une familiarité culturelle.
+Les IAG perturbent ce dispositif de manière ambivalente. 
+D'un côté, elles pourraient réduire l'inégalité en donnant accès à des productions formellement conformes aux attentes institutionnelles à des apprenants qui n'ont pas reçu ce capital culturel en héritage. 
+De l'autre, elles creusent une nouvelle inégalité entre ceux qui savent exploiter ces outils de façon critique et ceux qui s'y soumettent sans discernement. 
+Dans les deux cas, elles mettent en évidence ce qu'on pourrait appeler l'arbitraire des critères: si une machine peut les satisfaire, c'est qu'ils ne mesurent peut-être pas ce qu'ils prétendent mesurer.
+
+\subsection{L'épistémologie de l'évaluation: présupposés et fragilités}
+
+L'évaluation scolaire repose sur un ensemble de présupposés qui n'ont jamais eu besoin d'être formulés explicitement parce qu'ils semblaient aller de soi.%
+~\cite{leroux2015evaluer} en identifie plusieurs dans son analyse des pratiques d'évaluation au collégial: que le travail remis est le produit authentique de l'apprenant; qu'il est représentatif de ses capacités réelles; que la notation est cohérente et comparable entre contextes différents. 
+Ces présupposés étaient déjà fragiles avant les IAG: la variabilité inter-correcteurs est bien documentée, les biais sociaux dans l'évaluation sont établis. % chktex 13
+Mais ils restaient des fragilités contenues, car la production individuelle écrite demeurait difficile à falsifier sans laisser de traces.
+
+Les IAG effondrent cette dernière barrière. 
+Elles peuvent générer un travail formellement conforme aux critères d'évaluation sans que l'apprenant ait engagé les processus cognitifs que l'évaluation cherchait à stimuler.
+La notion centrale de \emph{validité de l'évaluation} --- sa capacité à mesurer ce qu'elle prétend mesurer --- est ainsi mise en crise: non pas fragilisée à la marge, mais questionnée dans son principe. 
+Le cadre de Chevallard permet de comprendre pourquoi cette crise est structurelle et non accidentelle; le cadre de Bourdieu permet de comprendre pourquoi
+elle est aussi une crise de légitimité, pas seulement d'efficacité technique.\section{Les IAG et la remise en question des \'evaluations}\label{sec:remise}
+
+\subsection{Transformation des pratiques d'\'evaluation}
+% - Devoirs, dissertations, exercices
+% - Problème de l'authenticité
+
+Les modalit\'es d'\'evaluation traditionnelles --- dissertation, compte rendu, exercice \`a domicile, m\'emoire --- ont \'et\'e con\c{c}ues dans un environnement o\`u la production \'ecrite personnelle constituait une t\^ache forc\'ement individuelle, n\'ecessitant un effort cognitif soutenu: recherche documentaire, organisation des id\'ees, ma\^\i trise de la langue, argumentation. 
+Cet effort \'etait lui-m\^eme formateur: le processus de r\'edaction contribuait \`a la construction des comp\'etences que l'on cherchait \`a \'evaluer.
+
+Les IAG transforment cet environnement. 
+Il est d\'esormais possible de g\'en\'erer en quelques minutes un texte structur\'e, argument\'e et bien r\'edig\'e sur presque n'importe quel sujet. 
+C'est le probl\`eme de l'\emph{authenticit\'e}: comment savoir si un travail remis est le produit de l'effort cognitif de l'apprenant, ou le r\'esultat d'une d\'el\'egation \`a une machine~?
+
+Le cas du m\'emoire est particuli\`erement significatif, car c'est l'exercice qui condense le plus d'exigences intellectuelles --- recherche, synth\`ese, argumentation originale. 
+Comme le montrent les \'etudes men\'ees par Leroux et al.\ sur les m\'ethodes d'\'evaluation au coll\'egial, les instruments d'\'evaluation ont \'et\'e con\c{c}us pour rendre compte d'un \emph{parcours de d\'eveloppement} individuel~\citep{leroux2015evaluer}.
+Or, l'IAG vient perturber ce parcours en s'ins\'erant comme interm\'ediaire entre l'\'etudiant et sa production. 
+Une recherche men\'ee \`a l'intersection des travaux sur les IAG et les m\'emoires universitaires soul\`eve la question suivante: lorsque l'\'etudiant utilise l'IAG pour r\'ediger une partie de son travail, en quoi le m\'emoire t\'emoigne-t-il encore de \emph{ses} comp\'etences propres?
+
+La r\'eponse des institutions a souvent consist\'e \`a tenter de d\'etecter les productions IA via des logiciels anti-plagiat. 
+Mais cette approche est limit\'ee: les d\'etecteurs produisent des taux importants de faux positifs et de faux n\'egatifs, et leur fiabilit\'e est insuffisante pour fonder des d\'ecisions acad\'emiques. 
+De plus, ils cr\'eent une course aux armements entre les outils de d\'etection et les outils de g\'en\'eration, sans traiter la question de fond.
+
+\subsection{D\'eplacement de la notion de comp\'etence}
+% - compétence cognitive vs compétence assistée
+% - rôle de l'IA dans la production de savoir
+
+L'usage des IAG soul\`eve une question philosophique sur la nature m\^eme de la comp\'etence: peut-on parler de \emph{comp\'etence assist\'ee} au m\^eme titre que de comp\'etence individuelle~?
+
+Ce d\'ebat n'est pas sans pr\'ec\'edent. 
+L'introduction de la calculatrice dans les classes de math\'ematiques avait provoqu\'e des tensions analogues: calculer \`a la main et calculer avec une machine mobilisent des comp\'etences diff\'erentes. 
+La calculatrice a finalement \'et\'e int\'egr\'ee, avec un recentrage de l'\'evaluation sur la mod\'elisation et l'interpr\'etation plut\^ot que sur l'op\'eration arithm\'etique. 
+Avec les IAG, le d\'efi est d'une autre ampleur: leur p\'erim\`etre d'action chevauche les comp\'etences d'ordre sup\'erieur que l'\'ecole vise \`a d\'evelopper --- l'argumentation, la synth\`ese, le raisonnement critique.
+Il est alors difficile de déterminer vers quoi recentrer l'\'evaluation si l'outil couvre déjà une grande partie du domaine traditionnellement évalué.
+
+Les travaux sur les comp\'etences \`a acqu\'erir mettent en avant la n\'ecessit\'e de \emph{m\'etacomp\'etences}: apprendre \`a apprendre, savoir s'informer, \'evaluer la pertinence et la fiabilit\'e des sources~\citep{heiser2023education}. 
+Or, une utilisation non critique des IAG risque pr\'ecis\'ement de court-circuiter le d\'eveloppement de ces m\'etacomp\'etences: l'\'etudiant qui recopie une synth\`ese IAG sans l'\'evaluer n'apprend pas \`a \'evaluer. 
+\`A l'inverse, l'\'etudiant qui utilise l'IAG comme outil dialectique --- pour tester des arguments, g\'en\'erer des contre-exemples, structurer sa pens\'ee --- peut exercer des comp\'etences \'elabor\'ees.
+
+Selon les travaux sur l'impact des IAG sur le d\'eveloppement des comp\'etences, la distinction cruciale est celle entre deux r\^oles que l'IA peut jouer: \emph{substitut} (elle remplace le processus cognitif de l'apprenant) ou \emph{outil} (elle amplifie et soutient ce processus)~\citep{shiohira2021comprendre}. 
+Cette distinction, claire en th\'eorie, est difficile \`a op\'erationnaliser dans la pratique \'evaluative: le rendu final ne permet g\'en\'eralement pas de d\'eterminer lequel de ces deux r\^oles l'IA a jou\'e.
+\section{Deux positions opposées face aux IAG}\label{sec:positions}
+
+Face à l'irruption des IAG dans les pratiques scolaires, les institutions ont souvent adopté une de deux postures opposées. 
+L'une cherche à préserver l'ordre existant en excluant l'outil; l'autre cherche à intégrer l'outil en adaptant les pratiques. 
+Ces deux positions méritent d'être présentées dans leur version la plus cohérente, puis soumises à une critique qui révèle leurs limites respectives --- et surtout, la limite qu'elles partagent.
+
+\subsection*{Position 1: l'interdiction}
+
+L'argument central de la position interdictionniste est celui de l'\emph{intégrité académique}. 
+Si l'évaluation vise à certifier les compétences d'un individu, toute délégation substantielle de la tâche à un outil est une fraude: non par mauvaise volonté nécessairement, mais parce qu'elle rompt le lien de représentation entre le travail remis et les capacités réelles de son auteur. 
+Comme le soulignent les travaux sur l'histoire de l'IA en éducation, les institutions ont toujours cherché à contrôler l'introduction des nouvelles technologies pour préserver la validité de leurs certifications, plutôt que de les remettre en question~\citep{lepage2023recension}. 
+L'interdiction s'inscrit dans cette logique de conservation.
+
+Ses arguments sont sérieux. 
+La délégation systématique de tâches formatives prive les apprenants du processus même qui construit les compétences: rédiger est formateur non pas parce que cela produit un texte, mais parce que cela oblige à organiser sa pensée, à affronter ses incohérences, à chercher les mots justes. 
+Court-circuiter ce processus, c'est obtenir un résultat sans en avoir parcouru le chemin. 
+De plus, si les certifications délivrent des diplômes sans correspondance avec des compétences réelles, leur valeur s'érode pour tous leurs titulaires: c'est un problème collectif, pas seulement individuel.
+
+Cependant, la position interdictionniste se heurte à des objections qui ne sont pas seulement pratiques. 
+Sur le plan pratique d'abord: les outils de détection de textes générés par IA produisent des taux élevés de faux positifs et ne permettent pas de fonder des décisions académiques fiables~\citep{leroux2015evaluer}. 
+L'interdiction risque ainsi de sanctionner inégalement: ceux qui savent mieux dissimuler leur usage sont moins exposés que ceux qui l'utilisent maladroitement. 
+Elle creuse donc, paradoxalement, une inégalité supplémentaire là où elle prétend rétablir l'équité.
+
+Mais la limite la plus profonde est épistémologique. 
+L'interdiction présuppose que les modalités d'évaluation actuelles --- la dissertation, le mémoire, le rapport écrit --- mesurent effectivement les compétences qu'elles sont censées certifier. 
+Or, si ces formes peuvent être satisfaites par une machine, c'est peut-être qu'elles ne mesuraient pas tant une compétence qu'une conformité formelle.
+Interdire l'outil sans interroger les critères, c'est préserver l'apparence de la mesure sans en vérifier la validité.
+
+\subsection*{Position 2: l'intégration}
+
+La position intégrationniste repose sur un argument de réalisme pédagogique: les IAG transforment déjà le monde professionnel et les pratiques intellectuelles. 
+Ne pas former les apprenants à les utiliser de façon critique, c'est les préparer à un monde qui a déjà changé.%
+~\cite{siham2024intelligence} rappellent que chaque grande étape de l'IA en éducation --- des systèmes experts des années 1980 aux systèmes adaptatifs --- a d'abord suscité des craintes avant d'être intégrée, permettant de nouvelles formes de personnalisation et de soutien à l'apprentissage.
+
+Dans sa version la plus réfléchie, cette position ne demande pas seulement d'autoriser les IAG, mais de \emph{repenser les modalités d'évaluation} pour mesurer des compétences moins facilement déléguables: la capacité à évaluer critiquement une production générée par IA, à la corriger, à l'articuler avec un raisonnement propre; l'oral et la mise en situation; le processus de réflexion plutôt que son seul résultat.
+Elle anticipe aussi un bénéfice d'équité: les apprenants sans accès à un encadrement familial ou social de qualité pourraient trouver dans les IAG un soutien pour structurer leurs idées, partiellement comparable à ce que d'autres reçoivent de leur environnement culturel.
+
+Cette position a cependant sa propre limite. 
+Intégrer les IAG sans redéfinir ce que l'on cherche à évaluer, c'est risquer de certifier des performances qui ne correspondent à aucune compétence réellement acquise. 
+La distinction théorique entre IAG comme \emph{substitut} (qui remplace le processus cognitif) et IAG comme \emph{outil} (qui l'amplifie)~\citep{shiohira2021comprendre} est claire en principe, mais indécidable à partir du seul rendu final: l'évaluateur ne voit pas le processus, seulement le produit. 
+Une intégration naïve risque donc de produire exactement ce qu'elle prétend éviter: une certification déconnectée des compétences réelles.
+
+\subsection*{Une limite partagée}
+
+Ces deux positions, aussi opposées qu'elles paraissent, partagent un présupposé commun: elles traitent la question des IAG comme un problème de \emph{régulation} de l'accès à un outil, sans interroger la validité des critères d'évaluation sur lesquels elles s'appuient. 
+L'une dit \og{}préservons les critères en excluant l'outil\fg{}; l'autre dit \og{}adaptons les outils en conservant l'esprit des critères\fg{}. 
+Ni l'une ni l'autre ne demande: ces critères mesurent-ils encore ce qu'ils sont censés mesurer? C'est cette question plus profonde que la section suivante cherche à poser.\section{Tensions et enjeux \'epist\'emologiques}\label{sec:tensions}
+
+Les deux positions exposées à la section précédente partagent une limite commune: elles traitent la question des IAG comme un problème de régulation sans interroger la validité des critères d'évaluation sur lesquels elles s'appuient. 
+C'est précisément ce que nous allons faire ici. 
+Les IAG ne créent pas les tensions suivantes: elles les révèlent, parce qu'elles poussent à leur point de rupture des présupposés que le système scolaire n'avait jamais eu besoin d'expliciter.
+
+
+\subsection*{Tension 1: l'appartenance cognitive d'un travail produit avec IAG}
+
+La première tension porte sur l'\emph{appartenance cognitive}: à qui appartient un travail produit avec l'aide d'une IAG?\@
+La question semble simple, mais elle révèle une ambiguïté au cœur de la définition même de la compétence.%
+~\cite{tardif2006evaluation} définit la compétence comme la mobilisation de ressources \emph{internes et externes}: dans cette perspective, l'IAG est une ressource externe légitime, au même titre qu'un dictionnaire, un logiciel spécialisé ou une base de données. 
+Refuser ce statut à l'IAG exige de justifier pourquoi certaines ressources externes sont légitimes et d'autres non --- justification que le système scolaire n'a pas encore fournie de façon cohérente.
+
+Mais la compétence suppose aussi une \emph{intériorisation}: on ne peut pas dire qu'un étudiant est compétent en argumentation s'il est incapable de construire un raisonnement sans IAG, même s'il sait très bien lui soumettre un prompt. 
+Le critère de l'intériorisation n'est pas arbitraire: il renvoie à l'idée que la compétence doit être \emph{transférable} à des situations nouvelles, y compris des situations où l'outil est absent.
+C'est précisément ce que la définition de~\cite{perrenoud2011construire} appelle la capacité à agir face à une \og{}famille de situations\fg{}: si cette capacité dépend entièrement de la présence de l'outil, elle n'est pas généralisable.
+
+La tension est d'autant plus aiguë que les IAG sont \emph{invisibles dans leurs traces}: contrairement à un logiciel de statistiques dont on voit le code, ou à une calculatrice dont les résultats intermédiaires trahissent l'usage, le recours à une IAG ne laisse aucune marque formelle dans le texte produit.
+L'évaluation a toujours présumé une cohérence entre performance affichée et capacités mobilisées: les IAG brisent cette présomption. 
+La réponse à cette tension n'est pas d'interdire la ressource, mais de concevoir des évaluations où le processus est observable --- l'oral, la mise en situation, le commentaire réflexif sur sa propre démarche --- plutôt que de s'appuyer sur le seul rendu final.
+
+\subsection*{Tension 2: l'évaluation mesure-t-elle encore une compétence individuelle?}
+
+La deuxième tension touche au fondement \emph{individualiste} de l'évaluation scolaire. 
+Notre système certifie des individus: chaque réussite est attribuée à une personne, en tant que trace de ses capacités propres. 
+Ce présupposé est cohérent avec l'idéologie méritocratique qui légitime le système scolaire --- l'idée que la hiérarchie des résultats reflète une hiérarchie des efforts et des aptitudes.
+
+\cite{pluet1971pierre} ont montré que ce présupposé était déjà partiellement fictif: la réussite scolaire co-dépend du capital culturel familial, c'est-à-dire d'une ressource inégalement distribuée que l'école fait passer pour un mérite individuel. % chktex 2
+Les IAG radicalisent cette déconstruction d'une façon nouvelle. 
+Ce que Bourdieu analysait comme la transmission tacite d'un style, d'une façon de penser et d'écrire, peut désormais être partiellement simulé par un outil accessible à tous. 
+La question n'est donc pas seulement: \og{}est-ce que cet étudiant a triché?\fg{} mais: \og{}qu'est-ce que nous cherchions réellement à mesurer en demandant ce type de travail?\fg{}
+
+La réponse qui s'impose est un déplacement de l'unité d'évaluation: plutôt que de certifier un produit fini dont on ne peut plus garantir l'authenticité individuelle, évaluer \emph{la façon dont l'apprenant interagit avec les outils à sa disposition}. 
+La compétence à l'ère des IAG n'est peut-être pas la compétence sans outil, mais la compétence \emph{dans} un écosystème outillé --- ce qui implique de rendre cet écosystème visible dans le dispositif d'évaluation lui-même.
+
+\subsection*{Tension 3: redistribution de l'autorité du savoir}
+
+La troisième tension concerne l'\emph{autorité épistémique}. 
+Dans le système scolaire traditionnel, l'enseignant est le détenteur et le médiateur du savoir légitime; l'évaluation mesure la conformité de la production de l'apprenant aux critères institutionnels. 
+Cette architecture suppose que l'institution scolaire est le lieu où se valide ce qui compte comme savoir.
+
+Les IAG perturbent cette architecture en introduisant une autorité épistémique concurrente, non institutionnelle. 
+Les apprenants les interrogent pour vérifier leurs réponses, structurer leurs idées, valider leurs hypothèses: elles exercent de fait une autorité épistémique sans être inscrites dans les dispositifs institutionnels de validation. 
+Ce phénomène n'est pas entièrement nouveau --- Internet et Wikipédia avaient déjà initié cette redistribution --- mais les IAG l'intensifient qualitativement: là où un moteur de recherche renvoyait à des sources que l'apprenant devait évaluer, une IAG produit directement une réponse synthétisée, avec une apparence d'autorité et de cohérence.
+
+\cite{lepage2023recension} montrent que la transformation du rôle de l'enseignant est un fil conducteur de toute l'histoire de l'IA en éducation, mais que les IA génératives l'accélèrent considérablement. % chktex 2
+Le rôle de transmetteur du savoir ne disparaît pas, mais il se déplace vers celui de \emph{formateur à l'évaluation critique des sources et des productions}: l'enseignant devient la personne qui apprend aux apprenants à questionner ce que l'IAG leur dit, à identifier ses angles morts, à distinguer une réponse plausible d'une réponse vérifiée. 
+C'est une transformation profonde, qui exige de repenser la formation des enseignants autant que les dispositifs d'évaluation.
+
+\subsection*{Tension 4: la crise des critères}
+
+La quatrième tension, la plus profonde, est une \emph{crise des critères}. 
+Les exercices évalués --- dissertation, mémoire, rapport --- étaient justifiés par l'idée qu'ils mobilisaient des compétences complexes et authentiquement humaines. 
+Si une IAG peut produire un texte formellement satisfaisant selon ces critères, c'est que les critères eux-mêmes sont insuffisants pour distinguer une compétence authentiquement développée d'une simulation compétente.
+
+Cette crise n'est pas entièrement nouvelle: des didacticiens ont depuis longtemps signalé le risque du \og{}contrat didactique perverti\fg{}~\citep{leroux2015evaluer}, où l'apprenant apprend à satisfaire les critères formels de l'évaluation sans développer les compétences visées.
+Ce comportement est d'ailleurs structurellement analogue à ce que fait une IAG pendant son propre entraînement: optimiser une fonction d'objectif définie par des évaluateurs humains, sans que cet objectif capture nécessairement ce qu'on cherche vraiment à produire. 
+Les IAG portent la logique du contrat didactique perverti à son point de rupture: elles rendent la simulation d'une production compétente techniquement accessible à tous.
+
+Mais cette rupture est aussi une opportunité épistémologique. 
+Si les IAG peuvent satisfaire nos critères actuels, c'est une invitation à formuler de \emph{meilleurs critères} --- des critères qui capturent ce que les outils ne peuvent pas faire à notre place. 
+Plusieurs candidats se dégagent de l'analyse: la réflexivité sur son propre processus d'apprentissage, la capacité à évaluer et corriger une production générée, le jugement situé dans un contexte singulier, l'engagement éthique avec le savoir. 
+Ces dimensions ne sont pas nouvelles dans la réflexion pédagogique; les IAG leur donnent simplement une urgence qu'elles n'avaient pas encore.\section{Discussion et conclusion}\label{sec:discussion}
+
+\subsection*{Ce que les tensions révèlent sur les deux positions}
+
+La mise en perspective des quatre tensions épistémologiques ci-dessus confirme que ni la position interdictionniste ni la position intégrationniste n'y apportent de réponse adéquate.
+
+L'interdiction échoue à traiter les tensions 1 et 4: elle préserve la forme des évaluations existantes sans interroger leur validité. 
+Elle suppose que nos critères actuels sont sains, et que le problème vient uniquement de l'outil. 
+Mais si une machine peut satisfaire ces critères, l'outil n'est pas le problème: il est le révélateur d'un problème antérieur. 
+De plus, elle est en contradiction interne avec la définition même de la compétence: si être compétent consiste à mobiliser des ressources pertinentes, interdire l'accès à une ressource pertinente est une décision pédagogique qui exige une justification --- pas un simple décret.
+
+L'intégration non réfléchie échoue à traiter les tensions 2 et 3: sans redéfinition des critères et sans rendre le processus d'apprentissage observable, elle risque de certifier des performances sans compétences réelles, et d'abandonner les apprenants dans un écosystème informationnel où l'autorité du savoir est dispersée et opaque. 
+Certifier que quelqu'un sait utiliser une IAG n'est pas la même chose que certifier qu'il a développé une pensée critique: la confusion entre les deux serait une régression, pas un progrès.
+
+\subsection*{Prendre position: ce que le système scolaire doit affronter}
+
+Le défi posé par les IAG est avant tout \emph{pédagogique et épistémologique}, non technologique. 
+Il contraint le système scolaire à répondre à des questions qu'il avait pu différer jusqu'ici: que voulons-nous réellement que les apprenants développent?
+Comment évaluer cela de façon valide? 
+Quel est le rôle de l'école dans une société où la connaissance est de plus en plus externalisée dans des outils?
+
+\cite{alexandre2019ia} formule cette question de façon provocatrice: dans une économie de la connaissance, l'école \og{}en tant que technologie de transmission de l'intelligence est d'ores et déjà une technologie dépassée\fg{}. %chktex 2
+Sa conclusion --- faire de l'éducation une \og{}branche de la médecine\fg{}, centrée sur l'augmentation cognitive individuelle --- est discutable dans ses modalités. 
+Mais le diagnostic mérite d'être pris au sérieux plutôt que mis de côté: si l'école se définit principalement par la transmission de savoirs formalisés et la certification de leur restitution, alors effectivement les IAG rendent cette définition obsolète. 
+La réponse n'est pas de devenir une branche de la médecine, mais de déplacer l'accent de la \emph{restitution} vers la \emph{production}: former des apprenants capables non seulement de mobiliser des savoirs existants, mais de les questionner, de les situer, et d'en produire de nouveaux --- des capacités que les IAG amplifient mais ne remplacent pas.
+
+La complexité du phénomène tient aussi au fait que les IAG ne forment pas un bloc homogène. 
+Leurs effets varient considérablement selon les niveaux scolaires, les disciplines et les types de tâches: une IAG qui aide un étudiant de master à structurer une argumentation complexe n'a pas le même effet formateur --- ni le même risque --- qu'une IAG utilisée à la place d'un exercice de résolution de problèmes en première année. 
+Une réponse pédagogique nuancée doit tenir compte de cette diversité plutôt que de chercher une politique universelle.
+
+\subsection*{Réponse à la question posée, et ouverture}
+
+Que deviennent les notions de compétence et de réussite scolaire dans un monde où les IAG sont en plein essor? 
+Notre analyse permet de formuler une réponse précise: ces notions ne disparaissent pas, mais elles \emph{se complexifient} en révélant des tensions que le système scolaire portait déjà, et que la technologie contraint désormais à affronter.
+
+La compétence, définie comme mobilisation de ressources internes et externes en situation, ne peut plus ignorer la question des outils cognitifs externalisés --- mais elle ne peut pas non plus s'y réduire: la compétence à l'ère des IAG est la capacité à interagir avec ces outils
+de façon critique, réflexive et transférable. 
+La réussite scolaire, partiellement construite sur une idéologie méritocratique déjà fragile, voit ses présupposés encore davantage exposés: le défi n'est pas de restaurer une méritocratie menacée, mais de se demander ce que l'école veut réellement certifier. 
+L'évaluation, enfin, doit évoluer de la certification d'un produit fini vers l'observation d'un processus: non pas \og{}qu'est-ce que cet apprenant a produit?\fg{} mais \og{}comment cet apprenant construit-il sa pensée, avec les outils à sa disposition?\fg{}.
+
+En perspective, l'enjeu dépasse la seule question des IAG. 
+C'est la question plus ancienne du rôle de l'école face à l'évolution des outils cognitifs qui se pose ici avec une acuité nouvelle: de l'écriture à l'imprimerie, de la calculatrice à Internet, chaque outil a contraint l'école à redéfinir ce qu'elle entend cultiver. 
+Les IA génératives ne sont probablement qu'une étape dans cette transformation longue. 
+L'avenir de l'évaluation scolaire est peut-être moins dans la résistance à ces outils que dans l'invention de formes capables de saisir ce qu'ils ne peuvent pas faire à notre place: le jugement situé, la réflexivité sur son propre apprentissage, l'engagement éthique avec le savoir. 
+Ce sont ces dimensions que l'école du XXI\textsuperscript{e}~siècle a plus que jamais vocation à cultiver.\section{Utilisation des intelligences artificielles dans ce mémoire}
+
+Dans la rédaction de ce mémoire, j'ai utilisé les IAG de plusieurs mani\`eres, principalement pour assister dans la recherche bibliographique, reformuler quelques passages pour plus de clart\'e, et corriger les fautes d'orthographe et de grammaire.
+Cependant, j'ai veill\'e \`a ce que le contenu et les analyses soient le fruit de ma propre r\'eflexion, en utilisant les IAG comme des outils d'assistance, et non comme des sources de contenu pr\'e-\'ecrit.
+\bibliography{references}  % fichier de références bibliographiques
