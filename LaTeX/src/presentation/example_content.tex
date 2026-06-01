@@ -47,6 +47,8 @@
   \small Encadré par Bruno \textsc{Durand}}
 \date{31 mai 2026}
 
+
+
 % -------- Pied de page personnalisé --------
 \setbeamertemplate{footline}{%
   \leavevmode%
@@ -67,12 +69,19 @@
 \begin{document}
 % ============================================================
 
-% -------- DIAPOSITIVE 1 : Titre --------
+% -------- DIAPOSITIVE 1: Titre --------
 \begin{frame}[plain]
   \titlepage
+  
+% \includegraphics{./images/UM1.png} %
+% or with small size
+\vspace{-2cm}
+\includegraphics[height=1.5cm]{./images/UM1.png} %
+\hfill
+\includegraphics[height=1.5cm]{./images/FDS1.png} %
 \end{frame}
 
-% -------- DIAPOSITIVE 2 : Plan --------
+% -------- DIAPOSITIVE 2: Plan --------
 \begin{frame}{Plan de la présentation}
   \tableofcontents[hideallsubsections]
 \end{frame}
@@ -82,39 +91,17 @@
 % ============================================================
 
 \begin{frame}{L'irruption des IAG dans l'espace éducatif}
-  \begin{columns}[T]
-    \begin{column}{0.56\textwidth}
-      \begin{itemize}
-        \item Lancement grand public de ChatGPT fin 2022
-        \item Diffusion massive et rapide dans les pratiques étudiantes
-        \item L'IA en éducation a une histoire longue (années 1950--1980)\\
-              --- mais une rupture \emph{qualitative} avec les IAG
-      \end{itemize}
-      \vspace{0.8em}
-      \begin{alertblock}{Ce qui est radicalement nouveau}
-        La capacité de générer du contenu en \textbf{langage naturel}
-        indiscernable d'une production humaine.
-      \end{alertblock}
-    \end{column}
-    \begin{column}{0.41\textwidth}
-      \begin{tikzpicture}[scale=0.85, font=\small]
-        \draw[-{Stealth}, thick, umbleu] (0,0) -- (0,4.5) node[above]{\footnotesize capacité};
-        \draw[-{Stealth}, thick, umbleu] (0,0) -- (5,0) node[right]{\footnotesize temps};
-        % Courbe anciens systèmes
-        \draw[thick, gray, dashed] plot[smooth] coordinates
-          {(0.2,0.3)(1,0.6)(2,1.0)(2.8,1.2)(3.5,1.3)};
-        \node[gray, align=left, font=\tiny] at (1.8,1.55)
-          {systèmes experts\\tuteurs adaptatifs};
-        % Courbe IAG
-        \draw[thick, accent, very thick] plot[smooth] coordinates
-          {(3.5,1.3)(3.8,1.5)(4.1,2.5)(4.4,4.0)};
-        \node[accent, font=\tiny\bfseries] at (4.55,3.2) {IAG};
-        % Flèche 2022
-        \draw[dotted] (3.5,0) -- (3.5,1.3);
-        \node[font=\tiny] at (3.5,-0.25) {2022};
-      \end{tikzpicture}
-    \end{column}
-  \end{columns}
+  \begin{itemize}
+    \item Lancement grand public de ChatGPT fin 2022
+    \item Diffusion massive et rapide dans les pratiques étudiantes
+    \item L'IA en éducation a une histoire longue (années 1950--1980)
+          --- mais une rupture \emph{qualitative} avec les IAG
+  \end{itemize}
+  \vspace{0.8em}
+  \begin{alertblock}{Ce qui est radicalement nouveau}
+    La capacité de générer du contenu en \textbf{langage naturel}
+    indiscernable d'une production humaine.
+  \end{alertblock}
 \end{frame}
 
 \begin{frame}{La problématique centrale}
@@ -131,21 +118,12 @@
   \begin{itemize}
     \item Ce n'est \emph{pas} une question organisationnelle ou technique
     \item Elle touche aux \textbf{fondements épistémologiques} du système scolaire
-    \item L'IAG agit comme un \textbf{révélateur} : elle met à nu des présupposés
+    \item L'IAG agit comme un \textbf{révélateur}: elle met à nu des présupposés
           que l'école n'avait pas eu besoin d'expliciter
   \end{itemize}
 \end{frame}
 
 \begin{frame}{La problématique centrale}
-  \begin{block}{Question de recherche}
-    \centering\large
-    Si un outil peut produire en quelques secondes\\
-    un travail formellement irréprochable,\\[0.4em]
-    \textbf{que mesurent encore nos évaluations~?}\\
-    \textbf{Que signifie encore réussir à l'école, ou être compétent~?}
-  \end{block}
-
-  \vspace{0.8em}
   \begin{block}{Objectif du mémoire}
     \textbf{Décrire et analyser ces tensions} ---
     pas proposer un système éducatif alternatif.
@@ -156,7 +134,7 @@
 \section{Définitions et cadre théorique}
 % ============================================================
 
-\begin{frame}{Compétence et réussite scolaire : définitions}
+\begin{frame}{Compétence et réussite scolaire: définitions}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
       \begin{block}{Compétence (Perrenoud, 1999)}
@@ -174,7 +152,7 @@
     \begin{column}{0.48\textwidth}
       \begin{block}{Réussite scolaire}
         Notes, passage de classe, diplôme ---
-        mais une tension fondamentale :
+        mais une tension fondamentale:
         mesure-t-on des compétences réelles
         ou une \emph{conformité aux codes institutionnels}~?
       \end{block}
@@ -188,7 +166,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Cadre théorique : deux piliers}
+\begin{frame}{Cadre théorique: deux piliers}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
       \begin{block}{Transposition didactique (Chevallard, 1985)}
@@ -203,18 +181,12 @@
       \begin{block}{Légitimité scolaire (Bourdieu)}
         Les critères d'évaluation valorisent un rapport
         au savoir \emph{culturellement arbitraire}.\\[0.4em]
-        Les IAG le mettent en évidence : si une machine
+        Les IAG le mettent en évidence: si une machine
         satisfait ces critères, \textbf{qu'est-ce qu'ils
         mesurent vraiment~?}
       \end{block}
     \end{column}
   \end{columns}
-
-  \vspace{0.8em}
-  \begin{itemize}
-    \item[$\Rightarrow$] La crise créée par les IAG est \textbf{structurelle}, pas accidentelle
-    \item[$\Rightarrow$] C'est aussi une crise de \textbf{légitimité}, pas seulement d'efficacité
-  \end{itemize}
 \end{frame}
 
 % ============================================================
@@ -224,58 +196,55 @@
 \begin{frame}{Comment les IAG fragilisent l'évaluation}
   \begin{columns}[T]
     \begin{column}{0.52\textwidth}
-      \textbf{L'évaluation traditionnelle supposait :}
+      \textbf{L'évaluation traditionnelle supposait:}
       \begin{itemize}
         \item Un travail authentiquement individuel
         \item Un effort cognitif observable dans le rendu
         \item Une cohérence entre performance et capacités
       \end{itemize}
       \vspace{0.6em}
-      \textbf{Ce que les IAG changent :}
+      \textbf{Ce que les IAG changent:}
       \begin{itemize}
         \item Texte structuré et argumenté en quelques minutes
         \item \textbf{Aucune trace} dans le rendu final
-        \item Les détecteurs IA : faux positifs, faux négatifs --- insuffisants
+        \item Les détecteurs IA: faux positifs, faux négatifs --- insuffisants
       \end{itemize}
     \end{column}
     \begin{column}{0.44\textwidth}
       \begin{alertblock}{La distinction cruciale (Shiohira, 2021)}
-        \textbf{Substitut} : l'IAG remplace le processus cognitif\\[0.3em]
-        \textbf{Outil} : l'IAG amplifie et soutient ce processus\\[0.5em]
+        \textbf{Substitut}: l'IAG remplace le processus cognitif\\[0.3em]
+        \textbf{Outil}: l'IAG amplifie et soutient ce processus\\[0.5em]
         \emph{Indiscernables à partir du seul rendu final.}
       \end{alertblock}
     \end{column}
   \end{columns}
 \end{frame}
 
-% ============================================================
-\section{Deux positions institutionnelles}
-% ============================================================
 
 \begin{frame}{Interdiction vs intégration}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \begin{block}{Position 1 : Interdiction}
-        \textbf{Argument} : intégrité académique ---
+      \begin{block}{Position 1: Interdiction}
+        \textbf{Argument}: intégrité académique ---
         déléguer c'est rompre le lien entre
         travail remis et compétences réelles.\\[0.4em]
-        \textbf{Forces} : préserve la valeur
+        \textbf{Forces}: préserve la valeur
         des certifications, maintient l'effort
         formateur.\\[0.4em]
-        \textbf{Limite profonde} : suppose que
+        \textbf{Limite profonde}: suppose que
         les critères actuels sont valides ---
         sans le vérifier.
       \end{block}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \begin{block}{Position 2 : Intégration}
-        \textbf{Argument} : réalisme pédagogique ---
+      \begin{block}{Position 2: Intégration}
+        \textbf{Argument}: réalisme pédagogique ---
         les IAG transforment déjà le monde
         professionnel.\\[0.4em]
-        \textbf{Forces} : prépare les apprenants,
+        \textbf{Forces}: prépare les apprenants,
         personnalisation, démocratisation
         potentielle.\\[0.4em]
-        \textbf{Limite profonde} : sans refonte
+        \textbf{Limite profonde}: sans refonte
         des critères, certifie des performances
         sans compétences réelles.
       \end{block}
@@ -332,10 +301,10 @@
 \begin{frame}{Tension 1 --- Appartenance cognitive}
   \begin{columns}[T]
     \begin{column}{0.54\textwidth}
-      \textbf{La question :} à qui appartient un travail
+      \textbf{La question:} à qui appartient un travail
       produit avec une IAG~?\\[0.6em]
       \begin{itemize}
-        \item \textbf{Tardif (2006)} : la compétence mobilise
+        \item \textbf{Tardif (2006)}: la compétence mobilise
               des ressources \emph{externes} --- l'IAG
               pourrait être légitime comme un dictionnaire.
         \item Mais la compétence exige aussi
@@ -347,12 +316,12 @@
     \end{column}
     \begin{column}{0.42\textwidth}
       \begin{alertblock}{Le problème des traces}
-        Calculatrice : calculs intermédiaires
+        Calculatrice: calculs intermédiaires
         absents → usage détectable.\\[0.3em]
-        IAG : \textbf{aucune marque formelle}
+        IAG: \textbf{aucune marque formelle}
         dans le texte produit.\\[0.3em]
         L'évaluation présumait une cohérence
-        performance / capacités : \textbf{cette
+        performance / capacités: \textbf{cette
         présomption est brisée}.
       \end{alertblock}
       \vspace{-0.5em}
@@ -367,26 +336,26 @@
 \begin{frame}{Tension 2 \& 3 --- Individu et autorité du savoir}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \begin{block}{T2 : Compétence individuelle}
+      \begin{block}{T2: Compétence individuelle}
         Le système certifie des \emph{individus} ---
         présupposé méritocratique déjà fragile
-        (Bourdieu : capital culturel familial).\\[0.4em]
-        Les IAG \textbf{radicalisent} cette déconstruction :
+        (Bourdieu: capital culturel familial).\\[0.4em]
+        Les IAG \textbf{radicalisent} cette déconstruction:
         si une machine peut satisfaire les critères,
         que mesure-t-on vraiment~?\\[0.4em]
-        \emph{Réponse :} évaluer comment l'apprenant
+        \emph{Réponse:} évaluer comment l'apprenant
         interagit avec les outils --- la compétence
         \textbf{dans} un écosystème outillé.
       \end{block}
     \end{column}
     \begin{column}{0.48\textwidth}
-      \begin{block}{T3 : Autorité épistémique}
-        Traditionellement : l'enseignant détient
+      \begin{block}{T3: Autorité épistémique}
+        Traditionellement: l'enseignant détient
         et médie le savoir légitime.\\[0.4em]
         Les IAG exercent une \textbf{autorité
         épistémique concurrente} --- elles synthétisent
         directement, sans passer par l'institution.\\[0.4em]
-        Le rôle enseignant se déplace :
+        Le rôle enseignant se déplace:
         transmetteur → \textbf{formateur à l'évaluation
         critique des sources}.
       \end{block}
@@ -394,23 +363,21 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Tension 4 --- La crise des critères (point central)}
+\begin{frame}{Tension 4 --- La crise des critères}
   \begin{block}{Le contrat didactique perverti}
     Les évaluations récompensaient la conformité formelle
-    plus que la compétence réelle --- les IAG portent
-    cette logique à son \textbf{point de rupture}.
+    plus que la compétence réelle.
   \end{block}
 
   \vspace{0.5em}
 
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \textbf{L'analogie frappante :}\\[0.3em]
       Une IAG pendant son entraînement optimise
       une fonction d'objectif définie par des
       évaluateurs humains, \emph{sans que cet objectif
       capture nécessairement ce qu'on cherche vraiment}.\\[0.3em]
-      → L'apprenant et l'IAG partagent
+      \(\rightarrow\) L'apprenant et l'IAG partagent
       \textbf{le même comportement d'optimisation}.
     \end{column}
     \begin{column}{0.49\textwidth}
@@ -438,7 +405,7 @@
         Elle préserve la \emph{forme} des évaluations
         sans interroger leur \emph{validité}.\\
         Elle est en contradiction interne avec la
-        définition de la compétence : exclure une
+        définition de la compétence: exclure une
         ressource pertinente exige une justification,
         pas un décret.
       \end{block}
@@ -455,16 +422,12 @@
   \end{columns}
 \end{frame}
 
-% ============================================================
-\section{Discussion et conclusion}
-% ============================================================
-
 \begin{frame}{Ce que les tensions impliquent}
 
-  \begin{alertblock}{Le diagnostic d'Alexandre (2019) --- à prendre au sérieux}
+  \begin{alertblock}{Le diagnostic d'Alexandre (2019)}
     Si l'école se définit par la \emph{restitution} de savoirs formalisés,
     les IAG la rendent effectivement obsolète.\\
-    La réponse : déplacer l'accent de la \textbf{restitution}
+    La réponse: déplacer l'accent de la \textbf{restitution}
     vers la \textbf{production} --- former des apprenants qui
     questionnent, situent et produisent des savoirs nouveaux.
   \end{alertblock}
@@ -480,27 +443,16 @@
   \vspace{0.5em}
 
   \begin{itemize}
-    \item \textbf{Compétence} : ne peut plus ignorer les outils cognitifs
+    \item \textbf{Compétence}: ne peut plus ignorer les outils cognitifs
           externalisés --- mais ne peut pas s'y réduire.
-    \item \textbf{Réussite} : le défi n'est pas de restaurer une méritocratie
-          menacée, mais de redéfinir ce que l'école veut certifier.
-    \item \textbf{Évaluation} : passer de «~qu'a produit l'apprenant~?~»
+    \item \textbf{Réussite}: redéfinir ce que l'école veut certifier.
+    \item \textbf{Évaluation}: passer de «~qu'a produit l'apprenant~?~»
           à «~comment construit-il sa pensée avec ses outils~?~»
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Conclusion}
 
-  \begin{alertblock}{Ouverture}
-    De l'écriture à l'imprimerie, de la calculatrice à Internet ---
-    chaque outil a contraint l'école à redéfinir ce qu'elle cultive.
-    L'avenir de l'évaluation est dans l'invention de formes capables
-    de saisir ce que les outils \textbf{ne peuvent pas faire à notre place} :
-    jugement situé, réflexivité, engagement éthique avec le savoir.
-  \end{alertblock}
-\end{frame}
-
-% -------- DIAPOSITIVE FINALE : Merci / Questions --------
+% -------- DIAPOSITIVE FINALE: Merci / Questions --------
 \begin{frame}[plain]
   \vfill
   \centering
